@@ -26,7 +26,7 @@ def get_content(url):
         region = movie['data-region']#国家
         director = movie['data-director']#导演
         actors = movie['data-actors']#主演
-        print('电影名:{}  星:{}  分数:{}  国家:{}  导演:{}  主演:{}  时长:{} \n'.format(name, star, score, region, director, actors, duration))
+        print('电影名:{}  星:{}  分数:{}  国家:{}  导演:{}  主演:{}  时长:{} \n'.format(name, (star / 10), score, region, director, actors, duration))
     print('\n')
     upcoming_ul = soup.find('div', id='upcoming').ul
     upcoming_lis = upcoming_ul.find_all('li', class_='list-item')
