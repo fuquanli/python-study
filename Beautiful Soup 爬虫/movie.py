@@ -28,14 +28,16 @@ def get_content(url):
         for act in actors:
             actor = actor + act.string + ' '
         intor = movie.find('p', class_='pTxt pIntroShow').text
-        img_url = movie.find('img')['src']
+        #img_url = movie.find('img')['src']
         print('片名：{}\t{}\n{}\n{} \n \n '.format(name,time,actor,intor))
-        with open('D:/fuquan/从零开始写python/Beautiful Soup 爬虫/电影图片/'+ name +'.png', 'wb+') as f:
-            f.write(requests.get('http:'+img_url).content)
+        #with open('D:/fuquan/从零开始写python/Beautiful Soup 爬虫/电影图片/'+ name +'.png', 'wb+') as f:
+            #f.write(requests.get('http:'+img_url).content)
 
 
 base_url = 'http://dianying.2345.com/top/'
 
 if __name__ == '__main__':
     get_content(base_url)
+    print('*********************************爬取结束*********************************')
+    input('任意键退出!')
 

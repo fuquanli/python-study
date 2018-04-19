@@ -32,3 +32,5 @@ if __name__ == '__main__':
     for k in dic:
         print(k+'排行榜 \n')
         get_content(base_url+dic[k])
+    print('*********************************爬取结束*********************************')
+    input('任意键退出!')
